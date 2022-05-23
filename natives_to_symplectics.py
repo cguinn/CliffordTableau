@@ -150,21 +150,21 @@ pauliTable = ['II',
 
 # ordered list of Clifford tableau columns for each Pauli product
 symplecticTable = [[0,0,0,0],
-                  [0,1,0,0],
-                  [0,1,0,1],
+                  [0,0,1,0],
+                  [0,0,1,1],
                   [0,0,0,1],
                   [1,0,0,0],
-                  [1,1,0,0],
-                  [1,1,0,1],
-                  [1,0,0,1],
                   [1,0,1,0],
+                  [1,0,1,1],
+                  [1,0,0,1],
+                  [1,1,0,0],
                   [1,1,1,0],
                   [1,1,1,1],
-                  [1,0,1,1],
-                  [0,0,1,0],
+                  [1,1,0,1],
+                  [0,1,0,0],
                   [0,1,1,0],
                   [0,1,1,1],
-                  [0,0,1,1]]
+                  [0,1,0,1]]
 
 def get_pauli_prod(m):
     #input: tensor product of two Pauli matrices
@@ -463,10 +463,10 @@ data_to_export = {'symplectics': symplectics, #list of symplectics
                   'phases': phases, #list of phases 
                   'circuits': circuits, #list of Cirq objects
                   'unitaries': cirq_unitaries} #list of unitaries
-
+'''
 with open('symplectic_compilation_XZ.pkl','wb') as f:
     pickle.dump(data_to_export,f)
     
 with open('symplectic_compilation_XZ.pkl','rb') as f:
     test_load = pickle.load(f)
-
+'''
